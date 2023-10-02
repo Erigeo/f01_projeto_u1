@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class Animal {
@@ -42,5 +40,4 @@ class Animal {
         birthDate = "01/01/1990",
         originalPrice = 100,
         marketPrice = 3000;
-        
 }

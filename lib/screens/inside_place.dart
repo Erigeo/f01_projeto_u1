@@ -60,7 +60,6 @@ class _InsidePlaceState extends State<InsidePlace> {
   }
 }
 
-
 class CustomListTile extends StatelessWidget {
   final Widget title;
 
@@ -70,8 +69,6 @@ class CustomListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     // Defina a cor da bolinha aqui (por exemplo, sempre verde)
     Color ballColor = Colors.green;
-
-
 
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 16.0),

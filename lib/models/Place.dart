@@ -23,10 +23,9 @@ class Place {
     return animals;
   }
 
- void removeAnimal(int index) {
-  animals.removeAt(index);
-}
-
+  void removeAnimal(int index) {
+    animals.removeAt(index);
+  }
 
   Place.initialize()
       : id = "00",

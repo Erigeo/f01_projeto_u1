@@ -92,9 +92,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   _MyHomePageState() {
     myPlaces = LocationProvider();
-    Place place1 = Place.initialize();
-
-    myPlaces.addLocation(place1);
   }
 
   @override

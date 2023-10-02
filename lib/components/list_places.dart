@@ -69,7 +69,7 @@ class CardItem extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Text(
-            place.name,
+            (place.name),
             style: TextStyle(color: Colors.black),
           ),
         ],

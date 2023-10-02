@@ -1,6 +1,7 @@
 import 'package:f01_projeto_u1/models/location_provider.dart';
 import 'package:f01_projeto_u1/components/list_places.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 /*class InsertAnimalScreen extends StatelessWidget {
   const InsertAnimalScreen({super.key});
@@ -27,20 +28,27 @@ class InsertAnimal extends StatelessWidget {
     final myPlaces =
         ModalRoute.of(context)!.settings.arguments as LocationProvider;
 
-   return Scaffold(
-  appBar: AppBar(
-    title: Text('Primeiro passo'),
-  ),
-  body: Column(
-    mainAxisAlignment: MainAxisAlignment.center, // Centralizar verticalmente
-    children: [
-      Text('Clique no local onde deseja adicionar o animal'),
-      Center(
-        child: ListPlaces(myPlaces, ModalRoute.of(context)!.settings.name as String),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Primeiro passo'),
       ),
-    ],
-  ),
-);
-
- }
- }
+      body: Column(
+        mainAxisAlignment:
+            MainAxisAlignment.center, // Centralizar verticalmente
+        children: [
+          Text('Clique no local onde deseja adicionar o animal'),
+          Center(
+            child: Consumer<LocationProvider>(
+              builder: (context, locationProvider, child) {
+                return ListPlaces(
+                  locationProvider,
+                  ModalRoute.of(context)!.settings.name as String,
+                );
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
