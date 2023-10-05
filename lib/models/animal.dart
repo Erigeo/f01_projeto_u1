@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class Animal {
   String serialNumber;
   String name;
@@ -12,32 +10,42 @@ class Animal {
   String birthDate;
   double originalPrice;
   double marketPrice;
-  Color health = Colors.green;
-  Animal(
-      this.serialNumber,
-      this.name,
-      this.register,
-      this.breed,
-      this.blood,
-      this.origin,
-      this.sex,
-      this.weight,
-      this.birthDate,
-      this.originalPrice,
-      this.marketPrice,
-      [this.health = Colors.green]);
+  int age;
+  String dietType;
+  List<DateTime> feedingTimes;
+  List<DateTime> veterinaryVisits;
+  double width;
+  double length;
+  bool breedPurityCertificate;
+  bool cio;
+  double custo;
+  List<String> vaccinations;
+  List<DateTime> vaccinationDates;
+  List<String> medicalTreatments;
 
-  // static Animal initialize() {}
-  Animal.initialize()
-      : serialNumber = "00",
-        name = "Animal 1",
-        register = "AB123",
-        breed = "Original",
-        blood = "Red",
-        origin = "Pure",
-        sex = "Female",
-        weight = 100,
-        birthDate = "01/01/1990",
-        originalPrice = 100,
-        marketPrice = 3000;
+  Animal({
+    this.serialNumber = "",
+    this.name = "",
+    this.register = "",
+    this.breed = "",
+    this.blood = "",
+    this.origin = "",
+    this.sex = "",
+    this.weight = 0.0,
+    this.birthDate = "",
+    this.originalPrice = 0.0,
+    this.marketPrice = 0.0,
+    this.age = 0,
+    this.dietType = "",
+    this.feedingTimes = const [],
+    this.veterinaryVisits = const [],
+    this.width = 0.0,
+    this.length = 0.0,
+    this.breedPurityCertificate = false,
+    this.cio = false,
+    this.custo = 0.0,
+    this.vaccinations = const [],
+    this.vaccinationDates = const [],
+    this.medicalTreatments = const [],
+  });
 }
