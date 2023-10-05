@@ -23,6 +23,18 @@ class Sheep extends Animal {
     String birthDate,
     double originalPrice,
     double marketPrice,
+    int age,
+    String dietType,
+    List<DateTime> feedingTimes,
+    List<DateTime> veterinaryVisits,
+    double width,
+    double length,
+    bool breedPurityCertificate,
+    bool cio,
+    double custo,
+    List<String> vaccinations,
+    List<DateTime> vaccinationDates,
+    List<String> medicalTreatments,
     this.status,
     this.hornType,
     this.milkTeeth,
@@ -44,20 +56,18 @@ class Sheep extends Animal {
           birthDate: birthDate,
           originalPrice: originalPrice,
           marketPrice: marketPrice,
-          health: Colors.green, // Valor padrão para a saúde
-          age: 0, // Valor padrão para a idade
-          dietType: "", // Valor padrão para o tipo de dieta
-          feedingTimes: [], // Valor padrão para os horários de alimentação
-          veterinaryVisits: [], // Valor padrão para as visitas veterinárias
-          width: 0.0, // Valor padrão para a largura
-          length: 0.0, // Valor padrão para o comprimento
-          breedPurityCertificate:
-              false, // Valor padrão para o certificado de pureza da raça
-          cio: false, // Valor padrão para o cio
-          custo: 0.0, // Valor padrão para o custo
-          vaccinations: [], // Valor padrão para as vacinações
-          vaccinationDates: [], // Valor padrão para as datas de vacinação
-          medicalTreatments: [], // Valor padrão para os tratamentos médicos
+          age: 0,
+          dietType: "",
+          feedingTimes: [],
+          veterinaryVisits: [],
+          width: 0.0,
+          length: 0.0,
+          breedPurityCertificate: false,
+          cio: false,
+          custo: 0.0,
+          vaccinations: [],
+          vaccinationDates: [],
+          medicalTreatments: [],
         );
 
   Sheep.initialize()
@@ -82,19 +92,17 @@ class Sheep extends Animal {
           birthDate: "01/03/2020",
           originalPrice: 1000.0,
           marketPrice: 800.0,
-          health: Colors.green, // Valor padrão para a saúde
-          age: 0, // Valor padrão para a idade
-          dietType: "", // Valor padrão para o tipo de dieta
-          feedingTimes: [], // Valor padrão para os horários de alimentação
-          veterinaryVisits: [], // Valor padrão para as visitas veterinárias
-          width: 0.0, // Valor padrão para a largura
-          length: 0.0, // Valor padrão para o comprimento
-          breedPurityCertificate:
-              false, // Valor padrão para o certificado de pureza da raça
-          cio: false, // Valor padrão para o cio
-          custo: 0.0, // Valor padrão para o custo
-          vaccinations: [], // Valor padrão para as vacinações
-          vaccinationDates: [], // Valor padrão para as datas de vacinação
-          medicalTreatments: [], // Valor padrão para os tratamentos médicos
+          age: 0,
+          dietType: "",
+          feedingTimes: [],
+          veterinaryVisits: [],
+          width: 0.0,
+          length: 0.0,
+          breedPurityCertificate: false,
+          cio: false,
+          custo: 0.0,
+          vaccinations: [],
+          vaccinationDates: [],
+          medicalTreatments: [],
         );
 }
