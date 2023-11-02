@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class RegisterPlace extends StatefulWidget {
+  const RegisterPlace({super.key});
+
   @override
   _RegisterPlaceState createState() => _RegisterPlaceState();
 }
@@ -46,14 +48,14 @@ class _RegisterPlaceState extends State<RegisterPlace> {
                   //setar os atributos
                   decoration: InputDecoration(
                     filled: true,
-                    fillColor: Color(0xFFEDEDED),
-                    hintStyle: TextStyle(color: Colors.grey),
+                    fillColor: const Color(0xFFEDEDED),
+                    hintStyle: const TextStyle(color: Colors.grey),
                     hintText: 'Registro',
                     border: OutlineInputBorder(
                       borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    contentPadding: EdgeInsets.symmetric(
+                    contentPadding: const EdgeInsets.symmetric(
                         vertical: 10.0,
                         horizontal: 16.0), // Ajuste o espaçamento interno
                   ),
@@ -73,14 +75,14 @@ class _RegisterPlaceState extends State<RegisterPlace> {
                   },
                   decoration: InputDecoration(
                     filled: true,
-                    fillColor: Color(0xFFEDEDED),
-                    hintStyle: TextStyle(color: Colors.grey),
+                    fillColor: const Color(0xFFEDEDED),
+                    hintStyle: const TextStyle(color: Colors.grey),
                     hintText: 'URL da Imagem',
                     border: OutlineInputBorder(
                       borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    contentPadding: EdgeInsets.symmetric(
+                    contentPadding: const EdgeInsets.symmetric(
                         vertical: 10.0,
                         horizontal: 16.0), // Ajuste o espaçamento interno
                   ),

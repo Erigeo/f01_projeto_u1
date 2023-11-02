@@ -10,7 +10,7 @@ class CowDetailsScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Detalhes da Vaca'),
+        title: const Text('Detalhes da Vaca'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -19,9 +19,9 @@ class CowDetailsScreen extends StatelessWidget {
           children: [
             Text(
               'Serial Number: ${cow.serialNumber}',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text('Name: ${cow.name}'),
             Text('Register: ${cow.register}'),
             Text('Breed: ${cow.breed}'),
@@ -32,7 +32,7 @@ class CowDetailsScreen extends StatelessWidget {
             Text('Birth Date: ${cow.birthDate}'),
             Text('Original Price: \$${cow.originalPrice.toStringAsFixed(2)}'),
             Text('Market Price: \$${cow.marketPrice.toStringAsFixed(2)}'),
-            Text('Status: ${(cow as Cow).status}'),
+            Text('Status: ${(cow).status}'),
           ],
         ),
       ),

@@ -30,13 +30,13 @@ class InsertAnimal extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Primeiro passo'),
+        title: const Text('Primeiro passo'),
       ),
       body: Column(
         mainAxisAlignment:
             MainAxisAlignment.center, // Centralizar verticalmente
         children: [
-          Text('Clique no local onde deseja adicionar o animal'),
+          const Text('Clique no local onde deseja adicionar o animal'),
           Center(
             child: Consumer<LocationProvider>(
               builder: (context, locationProvider, child) {

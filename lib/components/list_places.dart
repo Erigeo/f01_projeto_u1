@@ -45,7 +45,7 @@ class CardItem extends StatelessWidget {
   final int index;
   final Place place;
 
-  CardItem({required this.index, required this.place});
+  const CardItem({super.key, required this.index, required this.place});
 
   @override
   Widget build(BuildContext context) {
@@ -54,10 +54,10 @@ class CardItem extends StatelessWidget {
     return Container(
       height: 150,
       width: 150,
-      margin: EdgeInsets.all(10),
+      margin: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10), // Define o raio das bordas
-        color: Color(0xFFEDEDED), // Define a cor de fundo
+        color: const Color(0xFFEDEDED), // Define a cor de fundo
       ),
       child: Column(
         children: [
@@ -67,10 +67,10 @@ class CardItem extends StatelessWidget {
             width: 200,
             fit: BoxFit.cover,
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(
             (place.name),
-            style: TextStyle(color: Colors.black),
+            style: const TextStyle(color: Colors.black),
           ),
         ],
       ),
@@ -81,7 +81,7 @@ class CardItem extends StatelessWidget {
 class ListItem extends StatelessWidget {
   final int index;
 
-  ListItem({required this.index});
+  const ListItem({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {

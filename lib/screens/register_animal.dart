@@ -4,6 +4,8 @@ import 'package:f01_projeto_u1/models/cow.dart';
 import 'package:flutter/material.dart';
 
 class RegisterAnimal extends StatefulWidget {
+  const RegisterAnimal({super.key});
+
   @override
   _RegisterAnimalState createState() => _RegisterAnimalState();
 }
@@ -69,14 +71,14 @@ class _RegisterAnimalState extends State<RegisterAnimal> {
                     //setar os atributos
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Color(0xFFEDEDED),
-                      hintStyle: TextStyle(color: Colors.grey),
+                      fillColor: const Color(0xFFEDEDED),
+                      hintStyle: const TextStyle(color: Colors.grey),
                       hintText: 'Número de brinco',
                       border: OutlineInputBorder(
                         borderSide: BorderSide.none,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      contentPadding: EdgeInsets.symmetric(
+                      contentPadding: const EdgeInsets.symmetric(
                           vertical: 10.0,
                           horizontal: 16.0), // Ajuste o espaçamento interno
                     ),
@@ -96,14 +98,14 @@ class _RegisterAnimalState extends State<RegisterAnimal> {
                     },
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Color(0xFFEDEDED),
-                      hintStyle: TextStyle(color: Colors.grey),
+                      fillColor: const Color(0xFFEDEDED),
+                      hintStyle: const TextStyle(color: Colors.grey),
                       hintText: 'Registro',
                       border: OutlineInputBorder(
                         borderSide: BorderSide.none,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      contentPadding: EdgeInsets.symmetric(
+                      contentPadding: const EdgeInsets.symmetric(
                           vertical: 10.0,
                           horizontal: 16.0), // Ajuste o espaçamento interno
                     ),
@@ -123,14 +125,14 @@ class _RegisterAnimalState extends State<RegisterAnimal> {
                     },
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Color(0xFFEDEDED),
-                      hintStyle: TextStyle(color: Colors.grey),
+                      fillColor: const Color(0xFFEDEDED),
+                      hintStyle: const TextStyle(color: Colors.grey),
                       hintText: 'Nome',
                       border: OutlineInputBorder(
                         borderSide: BorderSide.none,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      contentPadding: EdgeInsets.symmetric(
+                      contentPadding: const EdgeInsets.symmetric(
                           vertical: 10.0,
                           horizontal: 16.0), // Ajuste o espaçamento interno
                     ),
@@ -150,14 +152,14 @@ class _RegisterAnimalState extends State<RegisterAnimal> {
                     },
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Color(0xFFEDEDED),
-                      hintStyle: TextStyle(color: Colors.grey),
+                      fillColor: const Color(0xFFEDEDED),
+                      hintStyle: const TextStyle(color: Colors.grey),
                       hintText: 'Peso',
                       border: OutlineInputBorder(
                         borderSide: BorderSide.none,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      contentPadding: EdgeInsets.symmetric(
+                      contentPadding: const EdgeInsets.symmetric(
                           vertical: 10.0,
                           horizontal: 16.0), // Ajuste o espaçamento interno
                     ),
@@ -177,14 +179,14 @@ class _RegisterAnimalState extends State<RegisterAnimal> {
                     },
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Color(0xFFEDEDED),
-                      hintStyle: TextStyle(color: Colors.grey),
+                      fillColor: const Color(0xFFEDEDED),
+                      hintStyle: const TextStyle(color: Colors.grey),
                       hintText: 'Valor de mercado',
                       border: OutlineInputBorder(
                         borderSide: BorderSide.none,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      contentPadding: EdgeInsets.symmetric(
+                      contentPadding: const EdgeInsets.symmetric(
                           vertical: 10.0,
                           horizontal: 16.0), // Ajuste o espaçamento interno
                     ),
@@ -204,14 +206,14 @@ class _RegisterAnimalState extends State<RegisterAnimal> {
                     },
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Color(0xFFEDEDED),
-                      hintStyle: TextStyle(color: Colors.grey),
+                      fillColor: const Color(0xFFEDEDED),
+                      hintStyle: const TextStyle(color: Colors.grey),
                       hintText: 'Nascimento',
                       border: OutlineInputBorder(
                         borderSide: BorderSide.none,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      contentPadding: EdgeInsets.symmetric(
+                      contentPadding: const EdgeInsets.symmetric(
                           vertical: 10.0,
                           horizontal: 16.0), // Ajuste o espaçamento interno
                     ),
@@ -235,7 +237,7 @@ class _RegisterAnimalState extends State<RegisterAnimal> {
                     onSaved: (value) {
                       animal1.blood = selectedValueBlood;
                     },
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Tipo Sanguíneo',
                       border: OutlineInputBorder(),
                     ),
@@ -259,7 +261,7 @@ class _RegisterAnimalState extends State<RegisterAnimal> {
                     onSaved: (value) {
                       animal1.breed = selectedBreed;
                     },
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Raça',
                       border: OutlineInputBorder(),
                     ),
@@ -283,7 +285,7 @@ class _RegisterAnimalState extends State<RegisterAnimal> {
                     onSaved: (value) {
                       animal1.sex = selectedSex;
                     },
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Tipo Sanguíneo',
                       border: OutlineInputBorder(),
                     ),
@@ -307,7 +309,7 @@ class _RegisterAnimalState extends State<RegisterAnimal> {
                     onSaved: (value) {
                       animal1.origin = selectedOrigin;
                     },
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Defina a origem',
                       border: OutlineInputBorder(),
                     ),
@@ -327,7 +329,7 @@ class _RegisterAnimalState extends State<RegisterAnimal> {
 
                       }
                     },
-                    child: Text('Registrar'),
+                    child: const Text('Registrar'),
                   ),
                 ],
               ),

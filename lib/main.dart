@@ -1,5 +1,3 @@
-import 'package:f01_projeto_u1/models/Place.dart';
-import 'package:f01_projeto_u1/models/cow.dart';
 import 'package:f01_projeto_u1/models/location_provider.dart';
 import 'package:f01_projeto_u1/components/list_places.dart';
 import 'package:f01_projeto_u1/screens/cow_details.dart';
@@ -31,13 +29,13 @@ class MyApp extends StatelessWidget {
         ),
         initialRoute: '/',
         routes: {
-          '/': (context) => MyHomePage(title: 'Fazendinha Home Page'),
-          '/register_animal': (context) => RegisterAnimal(),
-          '/insert_animal': (context) => InsertAnimal(),
-          '/register_place': (context) => RegisterPlace(),
-          '/inside_place': (context) => InsidePlace(),
-          '/view_places': (context) => ViewPlaces(),
-          '/cow_details': (context) => CowDetailsScreen(),
+          '/': (context) => const MyHomePage(title: 'Fazendinha Home Page'),
+          '/register_animal': (context) => const RegisterAnimal(),
+          '/insert_animal': (context) => const InsertAnimal(),
+          '/register_place': (context) => const RegisterPlace(),
+          '/inside_place': (context) => const InsidePlace(),
+          '/view_places': (context) => const ViewPlaces(),
+          '/cow_details': (context) => const CowDetailsScreen(),
         }
         //home: const MyHomePage(title: 'Fazendinha Home Page'),
         );
@@ -59,13 +57,13 @@ class _MyHomePageState extends State<MyHomePage> {
       context: context,
       builder: (BuildContext context) {
         return Container(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               ListTile(
-                leading: Icon(Icons.house),
-                title: Text('Adicionar local'),
+                leading: const Icon(Icons.house),
+                title: const Text('Adicionar local'),
                 onTap: () {
                   Navigator.pop(context);
                   Navigator.pushNamed(context, '/register_place',
@@ -73,8 +71,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
               ),
               ListTile(
-                leading: Icon(Icons.add),
-                title: Text('Adicionar animal'),
+                leading: const Icon(Icons.add),
+                title: const Text('Adicionar animal'),
                 onTap: () {
                   Navigator.pop(context);
                   Navigator.pushNamed(context, '/insert_animal',
@@ -98,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 90, 146, 132),
+        backgroundColor: const Color.fromARGB(255, 90, 146, 132),
         title: Text(widget.title),
         centerTitle: true,
         leading: Padding(
@@ -115,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment:
               MainAxisAlignment.center, // Centralizar verticalmente
           children: [
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(40.0),
               child: Text(
                 "Bem-vindo(a) à sua fazenda!",
@@ -133,9 +131,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 70.0),
-              child: const Center(
+            const Padding(
+              padding: EdgeInsets.only(top: 70.0),
+              child: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[],
@@ -164,20 +162,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: const Text('Visualizar lotes e espaços'),
               ),
             ),
-            SizedBox(height: 40.0), // Espaçamento vertical entre botões
+            const SizedBox(height: 40.0), // Espaçamento vertical entre botões
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Expanded(
                   child: Container(
-                    margin: EdgeInsets.all(20.0),
-                    padding: EdgeInsets.all(40.0),
+                    margin: const EdgeInsets.all(20.0),
+                    padding: const EdgeInsets.all(40.0),
                     decoration: BoxDecoration(
                       color: Colors.blue,
                       borderRadius:
                           BorderRadius.circular(20.0), // Bordas arredondadas
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         'Saúde',
                         style: TextStyle(color: Colors.white),
@@ -187,14 +185,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 Expanded(
                   child: Container(
-                    margin: EdgeInsets.all(20.0),
-                    padding: EdgeInsets.all(40.0),
+                    margin: const EdgeInsets.all(20.0),
+                    padding: const EdgeInsets.all(40.0),
                     decoration: BoxDecoration(
                       color: Colors.green,
                       borderRadius:
                           BorderRadius.circular(20.0), // Bordas arredondadas
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         'Finanças',
                         style: TextStyle(color: Colors.white),
@@ -209,15 +207,15 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
       floatingActionButton: Container(
-        margin: EdgeInsets.only(bottom: 16.0), // Margem inferior desejada
+        margin: const EdgeInsets.only(bottom: 16.0), // Margem inferior desejada
         child: FloatingActionButton(
           onPressed: () {
             _openBottomSheet();
           },
           tooltip: 'Open Modal',
-          child: Icon(Icons.add),
           backgroundColor: Colors.blue, // Cor de fundo
-          foregroundColor: Colors.white, // Cor do ícone
+          foregroundColor: Colors.white,
+          child: const Icon(Icons.add), // Cor do ícone
         ),
       ),
 

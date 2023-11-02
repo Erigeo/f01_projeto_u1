@@ -14,7 +14,7 @@ class ViewPlaces extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Lotes e Espaços'),
+        title: const Text('Lotes e Espaços'),
       ),
       body: Center(
         child: Consumer<LocationProvider>(

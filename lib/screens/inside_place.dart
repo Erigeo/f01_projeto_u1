@@ -3,7 +3,7 @@ import 'package:f01_projeto_u1/models/cow.dart';
 import 'package:flutter/material.dart';
 
 class InsidePlace extends StatefulWidget {
-  InsidePlace({Key? key}) : super(key: key);
+  const InsidePlace({Key? key}) : super(key: key);
 
   @override
   _InsidePlaceState createState() => _InsidePlaceState();
@@ -21,7 +21,7 @@ class _InsidePlaceState extends State<InsidePlace> {
       body: ListView.separated(
         itemCount: place.getAnimalList().length,
         separatorBuilder: (BuildContext context, int index) {
-          return Divider(); // Adiciona um divisor entre os elementos da lista
+          return const Divider(); // Adiciona um divisor entre os elementos da lista
         },
         itemBuilder: (BuildContext context, int index) {
           return Dismissible(
@@ -37,7 +37,7 @@ class _InsidePlaceState extends State<InsidePlace> {
             background: Container(
               color: Colors.red, // Cor de fundo ao deslizar
               alignment: Alignment.centerRight,
-              child: Icon(
+              child: const Icon(
                 Icons.delete,
                 color: Colors.white,
               ),
@@ -63,7 +63,7 @@ class _InsidePlaceState extends State<InsidePlace> {
 class CustomListTile extends StatelessWidget {
   final Widget title;
 
-  CustomListTile({required this.title});
+  const CustomListTile({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +71,7 @@ class CustomListTile extends StatelessWidget {
     Color ballColor = Colors.green;
 
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 16.0),
+      padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 16.0),
       child: Center(
         child: Row(
           children: [
